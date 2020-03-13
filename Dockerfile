@@ -19,7 +19,7 @@ RUN go run build.go build
 FROM node:12.13.0-alpine
 
 # PhantomJS
-RUN apk add --no-cache curl &&\
+RUN apk add --no-cache curl tar &&\
     cd /tmp && curl -Ls https://github.com/dustinblackman/phantomized/releases/download/2.1.1/dockerized-phantomjs.tar.gz | tar xz &&\
     cp -R lib lib64 / &&\
     cp -R usr/lib/x86_64-linux-gnu /usr/lib &&\
