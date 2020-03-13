@@ -46,7 +46,7 @@ RUN ./node_modules/.bin/grunt build
 # Final container
 FROM alpine:3.10
 
-LABEL maintainer="Grafana team <hello@grafana.com>"
+LABEL maintainer="Axinoss <research@axinoss.com>"
 
 ARG GF_UID="472"
 ARG GF_GID="472"
@@ -79,6 +79,22 @@ RUN mkdir -p "$GF_PATHS_HOME/.aws" && \
     cp "$GF_PATHS_HOME/conf/ldap.toml" /etc/grafana/ldap.toml && \
     chown -R grafana:grafana "$GF_PATHS_DATA" "$GF_PATHS_HOME/.aws" "$GF_PATHS_LOGS" "$GF_PATHS_PLUGINS" "$GF_PATHS_PROVISIONING" && \
     chmod -R 777 "$GF_PATHS_DATA" "$GF_PATHS_HOME/.aws" "$GF_PATHS_LOGS" "$GF_PATHS_PLUGINS" "$GF_PATHS_PROVISIONING"
+
+# Install helpful dependencies
+RUN set -ex \
+  \
+  && apk update \
+  && apk add --no-cache \
+    wget \
+    unzip
+
+# Install plugins
+RUN set -ex \
+  \
+  && mkdir -p /var/lib/grafana/plugins \
+  && cd /var/lib/grafana/plugins \
+  && wget https://github.com/ilgizar/ilgizar-candlestick-panel/raw/master/pack/ilgizar-candlestick-panel.zip \
+  && unzip *.zip
 
 # PhantomJS
 COPY --from=1 /tmp/lib /lib
