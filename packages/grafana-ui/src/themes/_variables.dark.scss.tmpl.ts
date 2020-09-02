@@ -355,7 +355,7 @@ $variable-option-bg: $dropdownLinkBackgroundHover;
 $switch-bg: $input-bg;
 $switch-slider-color: $dark-3;
 $switch-slider-off-bg: $gray-1;
-$switch-slider-on-bg: linear-gradient(90deg, #eb7b18, #d44a3a);
+$switch-slider-on-bg: linear-gradient(to right, #0890f1 30%, #1becd9 99%);
 $switch-slider-shadow: 0 0 3px black;
 
 //Checkbox
@@ -388,7 +388,7 @@ $panel-grid-placeholder-shadow: 0 0 4px $blue-shade;
 $logs-color-unkown: $gray-2;
 
 // toggle-group
-$button-toggle-group-btn-active-bg: linear-gradient(90deg, #eb7b18, #d44a3a);
+$button-toggle-group-btn-active-bg: linear-gradient(to right, #0890f1 30%, #1becd9 99%);
 $button-toggle-group-btn-active-shadow: inset 0 0 4px $black;
 $button-toggle-group-btn-seperator-border: 1px solid $dark-2;
 

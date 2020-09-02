@@ -31,7 +31,7 @@ export const getSelectStyles = stylesFactory((theme: GrafanaTheme) => {
     `,
     optionFocused: css`
       background: ${optionBgHover};
-      border-image: linear-gradient(#f05a28 30%, #fbca0a 99%);
+      border-image: linear-gradient(#0890f1 30%, #1becd9 99%);
       border-image-slice: 1;
       border-style: solid;
       border-top: 0;
