@@ -93,6 +93,7 @@ RUN set -ex \
   \
   && mkdir -p /var/lib/grafana/plugins \
   && cd /var/lib/grafana/plugins \
+  && echo "nameserver 8.8.8.8" > /etc/resolv.conf \
   && wget https://github.com/ilgizar/ilgizar-candlestick-panel/raw/master/pack/ilgizar-candlestick-panel.zip \
   && unzip *.zip
 
