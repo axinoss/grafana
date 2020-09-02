@@ -89,8 +89,8 @@ $text-shadow-faint: 1px 1px 4px rgb(45, 45, 45);
 $textShadow: none;
 
 // gradients
-$brand-gradient-horizontal: linear-gradient(to right, #0890f1, #1becd9));
-$brand-gradient-vertical: linear-gradient(#0890f1, #1becd9));
+$brand-gradient-horizontal: linear-gradient(to right, #0890f1, #1becd9);
+$brand-gradient-vertical: linear-gradient(#0890f1, #1becd9);
 $page-gradient: linear-gradient(180deg, $dark-5 10px, dark-2 100px);
 $edit-gradient: linear-gradient(180deg, $dark-2 50%, $input-black);
 
