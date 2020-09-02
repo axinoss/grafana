@@ -19,30 +19,14 @@ export class GrafanaLinksPanel extends PureComponent<Props> {
     return (
       <>
         <div className={styles.list}>
+          <HomeLink title="Axinoss/GitHub" icon="fa fa-book" url="https://www.github.com/axinoss" target="_blank" />
           <HomeLink
-            title="Documentation"
+            title="Axinoss/AWS"
             icon="fa fa-book"
-            url="https://grafana.com/docs/grafana/latest?utm_source=grafana_homelinks"
+            url="https://console.aws.amazon.com/billing/home?region=eu-west-1"
             target="_blank"
           />
-          <HomeLink
-            title="Getting started"
-            icon="fa fa-bolt"
-            url="https://grafana.com/docs/grafana/latest/guides/getting_started/?utm_source=grafana_homelinks"
-            target="_blank"
-          />
-          <HomeLink
-            title="Community forum"
-            icon="fa fa-comments"
-            url="https://community.grafana.com?utm_source=grafana_homelinks"
-            target="_blank"
-          />
-          <HomeLink
-            title="Report a bug"
-            icon="fa fa-bug"
-            url="https://github.com/grafana/grafana/issues/new?template=1-bug_report.md"
-            target="_blank"
-          />
+          <HomeLink title="Axinoss/Website" icon="fa fa-book" url="https://www.axinoss.com/" target="_blank" />
         </div>
         <VersionFooter />
       </>
